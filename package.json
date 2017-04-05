@@ -1,0 +1,41 @@
+{
+  "name": "docker-redis-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "scripts": {
+    "test": "mocha",
+    "purge": "rm -rf node_modules dist",
+    "clean": "npm run purge && npm install",
+    "build": "babel server.js --out-file server-compiled.js",
+    "serverstart": "REDIS_IP=redis node server-compiled.js",
+    "startapi": "REDIS_IP=redis node index.js",
+    "dev": "npm run build && REDIS_IP=redis nodemon index.js",
+    "shell:redis": "docker exec -ti dockerredisexpress_redis_1 sh",
+    "shell:node": "docker exec -ti dockerredisexpress_node-redis_1 sh",
+    "up:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build --remove-orphans",
+    "up:server": "docker-compose -f docker-compose.yml -f docker-compose.server.yml up -d --build --remove-orphans",
+    "stop": "docker-compose stop"
+  },
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-register": "^6.18.0",
+    "bluebird": "^3.4.7",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0",
+    "redis": "^2.6.3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.19.0",
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
+  }
+}

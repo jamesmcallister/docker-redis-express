@@ -1,0 +1,16 @@
+version: '2'
+services:
+  node-redis:
+    image: mhart/alpine-node:7.1.0
+    volumes:
+      - "./:/src"
+    ports:
+      - "9001:9001"
+    depends_on:
+      - redis
+    links:
+      - redis
+  redis:
+    image: "redis:alpine"
+    volumes:
+      - "./data:/data"

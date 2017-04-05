@@ -1,0 +1,4 @@
+version: '2'
+services:
+  node-redis:
+    command: sh -c 'cd /src && npm install; npm run build; npm run serverstart'
