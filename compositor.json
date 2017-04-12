@@ -1,0 +1,96 @@
+{
+  "name": "jamesmcallister/docker-redis-express",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "Docker Redis Express",
+  "branch": "",
+  "style": {
+    "name": "Future",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Avenir Next\", Helvetica, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.2em"
+    },
+    "alternativeText": {
+      "textTransform": "uppercase",
+      "fontWeight": 400,
+      "letterSpacing": "0.2em",
+      "opacity": 0.75
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    },
+    "layout": {
+      "centered": true,
+      "maxWidth": 1024,
+      "bannerHeight": "80vh"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/jamesmcallister/docker-redis-express",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/docker-redis-express",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "docker-redis-express",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "docker-redis-express: ",
+          "url": null
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "jamesmcallister",
+          "repo": "docker-redis-express"
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<p>Redis runs inside of docker, express is inside its own nodejs container.</p>\n<p>docker-compose needs to be installed on host machine</p>\n<p><code>npm run up:dev</code> runs docker in non daemon mode.</p>\n<p><code>npm run up:server</code> runs docker in daemon mode and and complies <code>server-compiled.js</code></p>\n<p>once the server is up, you can run <code>npm test</code></p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/jamesmcallister/docker-redis-express",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/jamesmcallister",
+          "text": "jamesmcallister"
+        }
+      ]
+    }
+  ]
+}
