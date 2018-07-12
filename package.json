@@ -10,26 +10,24 @@
     "dev": "REDIS_IP=redis nodemon index.js",
     "shell:redis": "docker exec -ti dockerredisexpress_redis_1 sh",
     "shell:node": "docker exec -ti dockerredisexpress_node-redis_1 sh",
-    "up:dev":
-      "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build --remove-orphans",
-    "up:server":
-      "docker-compose -f docker-compose.yml -f docker-compose.server.yml up -d --build --remove-orphans",
+    "up:dev": "docker-compose -f docker-compose.yml -f docker-compose.dev.yml up --build --remove-orphans",
+    "up:server": "docker-compose -f docker-compose.yml -f docker-compose.server.yml up -d --build --remove-orphans",
     "stop": "docker-compose stop"
   },
   "devDependencies": {
     "babel-cli": "6.26.0",
-    "babel-preset-env": "1.6.1",
+    "babel-preset-env": "1.7.0",
     "babel-register": "6.26.0",
     "bluebird": "3.5.1",
     "chai": "3.5.0",
     "cors": "2.8.4",
     "eslint": "3.19.0",
     "express": "4.16.2",
-    "mocha": "3.2.0",
+    "mocha": "5.2.0",
     "node": "8.9.4",
-    "nodemon": "1.17.1",
-    "prettier": "1.11.1",
+    "nodemon": "1.18.1",
+    "prettier": "1.13.7",
     "redis": "2.8.0",
-    "supertest": "3.0.0"
+    "supertest": "3.1.0"
   }
 }
